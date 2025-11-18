@@ -4,6 +4,8 @@
 
 {% block content %}
 <div class="card shadow p-4">
+    
+
     <h1 class="fw-bold">{{ post.title }}</h1>
     <p class="text-muted small">{{ post.created_at|date:"F d, Y" }}</p>
     <p>by {{ post.author.username }}</p>

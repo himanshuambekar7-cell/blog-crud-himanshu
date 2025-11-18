@@ -29,10 +29,10 @@ def post_list(request):
 @login_required
 def post_create(request):
     if request.method == "POST":
-        form = BlogPostForm(request.POST)
+        form = BlogPostForm(request.POST, request.FILES)
         if form.is_valid():
             post = form.save(commit=False)
-            post.author = request.user   # 🔥 Save logged user as author
+            post.author = request.user   
             post.save()
             return redirect('post_list')
     else:
@@ -49,7 +49,7 @@ def post_update(request, pk):
     post = get_object_or_404(BlogPost, pk=pk)
 
     if request.method == "POST":
-        form = BlogPostForm(request.POST, instance=post)
+        form = BlogPostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             form.save()
             return redirect('post_list')
