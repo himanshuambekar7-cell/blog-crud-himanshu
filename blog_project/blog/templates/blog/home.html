@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div style="text-align: center; margin-top: 50px;">
+    <h1 style="font-size: 40px; color: #222222;">Welcome to the Blog</h1>
+
+    <p style="font-size: 18px; color: #ead62a;">
+        This is your mini blog project created with Django.
+    </p>
+
+    <a href="{% url 'post_list' %}"
+       style="display: inline-block; padding: 10px 20px; margin-top: 20px; 
+              background: #4CAF50; color: white; text-decoration: none; 
+              border-radius: 5px; font-size: 16px;">
+        View All Posts
+    </a>
+</div>
+{% endblock %}
