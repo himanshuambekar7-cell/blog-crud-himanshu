@@ -9,11 +9,6 @@ Built with Django and Bootstrap-based styling — perfect for learning and showc
 
 
 
-\## 🌐 Live Deployment
-
-Link  — (http://127.0.0.1:8000/accounts/login/)
-
-
 
 🚀 Features
 
